@@ -14,8 +14,8 @@ on:
     types: [started]
     
 env:
-  ROM_URL: https://bigota.d.miui.com/20.3.26/miui_LAVENDER_20.3.26_eae10f6555_10.0.zip
-  ROM_NAME: MIUI
+  ROM_URL: https://dl.google.com/developers/android/rvc/images/factory/coral-rpp2.200227.009-factory-c830387d.zip
+  ROM_NAME: Pixel
   TZ: Asia/Shanghai
 
 jobs:
