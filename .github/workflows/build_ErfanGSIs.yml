@@ -14,7 +14,7 @@ on:
     types: [started]
     
 env:
-  ROM_URL: https://dl.google.com/developers/android/rvc/images/factory/coral-rpp2.200227.009-factory-c830387d.zip
+  ROM_URL: https://dl.google.com/developers/android/rvc/images/factory/walleye-rpp2.200227.009-factory-6f250ac5.zip
   ROM_NAME: Pixel
   TZ: Asia/Shanghai
 
