@@ -14,9 +14,8 @@ on:
     types: [started]
     
 env:
-  ROM_URL1: http://bigota.d.miui.com/20.7.13/miui_RAPHAEL_20.7.13_2252d27bb3_10.0.zip
-  ROM_URL2: http://bigota.d.miui.com/20.7.13/miui_VIOLET_20.7.13_7ffd1ccef2_10.0.zip
-  ROM_NAME: MIUI
+  ROM_URL1: http://download.h2os.com/OnePlus7/OBT/OnePlus7Hydrogen_13.X.39_OTA_039_all_2007030032_29ec276e10f04874.zip
+  ROM_NAME: OxygenOS
   TZ: Asia/Shanghai
 
 jobs:
@@ -48,19 +47,8 @@ jobs:
          run: |
            sudo ./ErfanGSIs/url2GSI.sh $ROM_URL1 $ROM_NAME
            ls /home/runner/work/actions_build_ErfanGSIs/actions_build_ErfanGSIs/ErfanGSIs/output/
-           7z a -r raphael-ab.7z /home/runner/work/actions_build_ErfanGSIs/actions_build_ErfanGSIs/ErfanGSIs/output/MIUI-AB-10-*-ErfanGSI.img
-           sudo ./transfer wet raphael-ab.7z
-           sudo rm raphael-ab.7z
-           7z a -r raphael-aonly.7z /home/runner/work/actions_build_ErfanGSIs/actions_build_ErfanGSIs/ErfanGSIs/output/MIUI-Aonly-*-ErfanGSI.img
-           sudo ./transfer wet raphael-aonly.7z
-           sudo rm raphael-aonly.7z
-           sudo rm -rf /home/runner/work/actions_build_ErfanGSIs/actions_build_ErfanGSIs/ErfanGSIs/output
-
-       - name: Download Stock Rom & Generate GSI Part 2
-         run: |
-           sudo ./ErfanGSIs/url2GSI.sh $ROM_URL2 $ROM_NAME
-           7z a -r violet-ab.7z /home/runner/work/actions_build_ErfanGSIs/actions_build_ErfanGSIs/ErfanGSIs/output/MIUI-AB-10-*-ErfanGSI.img
-           sudo ./transfer wet violet-ab.7z
-           sudo rm violet-ab.7z
-           7z a -r violet-aonly.7z /home/runner/work/actions_build_ErfanGSIs/actions_build_ErfanGSIs/ErfanGSIs/output/MIUI-Aonly-*-ErfanGSI.img
-           sudo ./transfer wet violet-aonly.7z
+           7z a -r gsi.7z /home/runner/work/actions_build_ErfanGSIs/actions_build_ErfanGSIs/ErfanGSIs/output/*-AB-10-*-ErfanGSI.img
+           sudo ./transfer wet gsi.7z
+           sudo rm gsi.7z
+           7z a -r gsi-aonly.7z /home/runner/work/actions_build_ErfanGSIs/actions_build_ErfanGSIs/ErfanGSIs/output/*-Aonly-*-ErfanGSI.img
+           sudo ./transfer wet gsi-aonly.7z
