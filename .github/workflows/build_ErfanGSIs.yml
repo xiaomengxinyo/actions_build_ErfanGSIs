@@ -14,8 +14,8 @@ on:
     types: [started]
     
 env:
-  ROM_URL1: http://download.h2os.com/OnePlus7/OBT/OnePlus7Hydrogen_13.X.39_OTA_039_all_2007030032_29ec276e10f04874.zip
-  ROM_NAME: OxygenOS
+  ROM_URL1: https://firmware.meizu.com/Firmware/Flyme/meizu17_Pro/8.1.2.2/cn/20200704153422/5fc9f15d/update.zip
+  ROM_NAME: Flyme
   TZ: Asia/Shanghai
 
 jobs:
