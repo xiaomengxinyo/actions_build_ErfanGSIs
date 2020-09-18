@@ -14,7 +14,7 @@ on:
     types: [started]
     
 env:
-  ROM_URL1: http://bigota.d.miui.com/V12.0.1.0.QFGCNXM/miui_LAVENDER_V12.0.1.0.QFGCNXM_b44f121fca_10.0.zip
+  ROM_URL1: https://bigota.d.miui.com/20.1.9/miui_LAVENDER_20.1.9_c2586b57f6_10.0.zip
   ROM_NAME: MIUI
   TZ: Asia/Shanghai
 
